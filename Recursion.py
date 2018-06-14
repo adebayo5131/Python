@@ -1,3 +1,6 @@
+#def means defining a function
+
+
 def tri_recursion(k):
   if(k>0):
     result = k+tri_recursion(k-1)
