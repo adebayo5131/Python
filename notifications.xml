@@ -1,0 +1,10 @@
+<application>
+  <component name="NotificationConfiguration">
+    <notification groupId="Find in Path" displayType="TOOL_WINDOW" />
+    <notification groupId="Find Problems" displayType="STICKY_BALLOON" />
+    <notification groupId="Indexing" />
+    <notification groupId="PyCharm Professional Advertiser" displayType="STICKY_BALLOON" />
+    <notification groupId="Python Compatibility Inspection Advertiser" displayType="STICKY_BALLOON" />
+    <notification groupId="Remote Desktop" />
+  </component>
+</application>
