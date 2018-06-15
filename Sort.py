@@ -26,16 +26,6 @@ class Sort():
         return self.list
 
 
-    # def get_Input(self):
-    #  # Get list from user
-    # print("List 5 numbers")
-    # numbers = input().split()
-    #
-    #
-    #
-    #
-    # return numbers
-
     def printer(self):
         print(self.sort_asending())
         print(self.sort_descending())
