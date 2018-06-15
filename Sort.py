@@ -1,5 +1,7 @@
 class Sort():
     list = [2, 5, 3, 4, 1]
+
+
     def sort_asending(self):
         if self.list == []:
             raise Exception("List is empty")
@@ -23,12 +25,17 @@ class Sort():
 
         return self.list
 
-    def print_my_list(self):
-        pass
-    def print_one(self):
-        pass
-    def get_Input(self):
-        pass
+
+    # def get_Input(self):
+    #  # Get list from user
+    # print("List 5 numbers")
+    # numbers = input().split()
+    #
+    #
+    #
+    #
+    # return numbers
+
     def printer(self):
         print(self.sort_asending())
         print(self.sort_descending())
