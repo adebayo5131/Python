@@ -3,8 +3,8 @@ class Sort():
 
 
     def sort_asending(self):
-        if self.list == []:
-            raise Exception("List is empty")
+        # if self.list == []:
+        #     raise Exception("List is empty")
         for i in range(len(self.list)):
             for j in range(0, len(self.list)-i-1):
                 if self.list[j] > self.list[j+1]:
