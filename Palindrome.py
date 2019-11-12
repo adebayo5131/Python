@@ -1,28 +1,29 @@
-def reverse(s):
-    return s[::-1]
+##def reverse(s):
+##    return s[::-1]
+##
+##def isPalindrome(s):
+##    checkRev = reverse(s)
+##
+##    if s == checkRev:
+##        return True
+##    else:
+##        return False
+##
+##    return null
+##
+##word= 'aaa'  
+##answer = isPalindrome(word)
+##if(answer == True):
+##    print('yes')
+##else:
+##    print('no')
 
-def isPalindrome(s):
-    checkRev = reverse(s)
 
-    if s == checkRev:
-        return True
-    else:
-        return False
-
-    return null
-
-word= 'aaa'  
-answer = isPalindrome(word)
-if(answer == True):
-    print('yes')
-else:
-    print('no')
-
-
-check = 'LOL'
+check = 'noa'
 x= ""
 
 for i in check: 
-    x = i + x 
+    x = i + x
     if (check==x): 
         print("YES")
+    print(x)
