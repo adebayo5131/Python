@@ -12,7 +12,7 @@ phoneNumber = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
 po = phoneNumber.findall(message)
 print(po)
 
-vowels = 'My name is james brandon messi'
+vowels = 'My name is james brandon messi oo'
 vowelRegex = re.compile(r'[aeiouAEIOU]')
 vo = vowelRegex.findall(vowels)
 print(vo)
@@ -22,6 +22,10 @@ notvowels = re.compile(r'[^aeiouAEIOU]')
 no = notvowels.findall(vowels)
 print(no)
 
-notvowels = re.compile(r'[^aeiouAEIOU] {2}')
+notvowels = re.compile(r'[aeiouAEIOU] {2}')
+bo = notvowels.findall(vowels)
+print(bo)
+
+notvowels = re.compile(r'[^aeiouAEIOU]')
 no = notvowels.findall(vowels)
 print(no)

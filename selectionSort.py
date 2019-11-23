@@ -1,22 +1,13 @@
 import time
 start_time = time.time()
-
-
-def selectionSort(arr):
-    for i in range(len(arr)):
-        min_index=i
-       
-        for j in range(i+1,len(arr)):
-            if arr[min_index] > arr[j]:
-                min_index = j
-                
-            #arr[i], arr[min_index] = arr[min_index], arr[i]
-                temp= arr[min_index]
-                arr[min_index]=arr[i]
-                arr[i]=temp 
-    return arr
-        
-arr=[2,3,5,1,0,6,4]
+def selectionSort(a):
+    for i in range(len(a)):
+        j=i+1
+        for j in range(len(a)):
+            if a[j] > a[i]:
+                a[j], a[i] = a[i],a[j]
+    return a
+arr=[7, 8, 3, 11, 43, 55]
 print(selectionSort(arr))
 
 
