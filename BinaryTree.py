@@ -20,8 +20,7 @@ class Node:
                 return self.rightChild.insert(data)
             else:
                 self.rightChild = Node(data)
-                return True
-            
+                return True            
             
     def find(self,data):
         if self.value == data:
@@ -62,14 +61,8 @@ class Node:
             print(str(self.value))
             if self.rightChild:
                 self.rightChild.inOrder()
-                
-    def getNumOfleaf(self):
-        if self is None:
-            return 0
-        if(self.leftChild is None and self.rightChild is None):
-            return 1
-        else:
-            return getNumOfleaf(self.leftChild) + getNumOfleaf(self.rightChild)
+
+
             
 class Tree:
 
@@ -105,18 +98,12 @@ class Tree:
         print("inOrder")
         self.root.inOrder()
 
-    def getNumOfleaf(self):
-        print("Number of leaf")
-        getNumOfleaf()
-        
-
 #Instanciate tree:
 
 bst = Tree()
 bst.insert(4)
 bst.insert(1)
 bst.insert(2)
-bst.insert(3)
 bst.insert(5)
 bst.insert(6)
 print(bst.insert(7))
