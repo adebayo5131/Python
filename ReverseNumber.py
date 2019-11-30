@@ -1,17 +1,30 @@
-
 class Solution(object):
-    
-    def __init__(self,x):
-        self.x= x
-        
-    def reverse(self, x: int) -> int:
-        if str(x).startswith("-"):
-            print(format(-1 * int(str(x*-1)[::-1])))
+    def reverse(self,x): 
+        if x > 0:
+            reverse = 0
+            while(x > 0):
+                reminder =x %10
+                reverse = (reverse *10) + reminder
+                x = x //10
+            reverse
+        elif x <= 0:
+            x*= -1
+            reverse = 0
+            while(x > 0):
+                reminder =x %10
+                reverse = (reverse *10) + reminder
+                x = x //10
+            reverse = reverse*-1
+          #Handle integer overflow
+        minX = -2**31  
+        maxX = 2**31 - 1  
+        if reverse < maxX and reverse > minX:  
+            return reverse  
         else:
-            print(int(str(x)[::-1]))
+            return 0
 
-x= 9646324351      
-c=Solution(x)
-c.reverse(x)
+x= -123      
+c=Solution()
+print(c.reverse(x))
 
         
