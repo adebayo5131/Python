@@ -1,7 +1,7 @@
-#import regular expression
+# import regular expression
 import re
 
-message='''
+message = '''
 Email: adebayoajagunna@gmail.com | 250 E 29TH street, apt 2c, Brooklyn NY 11226 | cell: 917-900-2051 ,  917-902-2051
 
 EDUCATION
@@ -12,7 +12,7 @@ Bachelor of Science degree in Computer Science, August 2019 – Present
 CUNY, Borough of Manhattan Community College (BMCC), New York, NY
 
 Associate of Science degree, Honors in Computer Science, August 2015 – May 2018
-•	GPA: 3.953 
+•	GPA: 3.953
 •	Dean’s List: January 2016 – May 2018
 
 RELEVANT COURSE WORK
@@ -27,8 +27,8 @@ COMPUTER SKILLS
 •	Frameworks/Tools: Terminal, Git, GitHub, JetBrains IDE’s, Bracket, Visual Studio, Heroku
 
 SPECIAL PROJECTS
-Lehman College NSBE(Nation Society of Black Engineers) Hackathon, November 2019 
-•	Created a mobile application using React-Native called MONYC, November 2019 
+Lehman College NSBE(Nation Society of Black Engineers) Hackathon, November 2019
+•	Created a mobile application using React-Native called MONYC, November 2019
 •	Created a sign-in page that handles user’s authentication, November 2019
 •	Created a maps page that displays a map of all locations of MONYC, November 2019
 •	Contributed to the user’s profile page, November 2019
@@ -61,35 +61,34 @@ SCHOLARSHIPS/MEMBERSHIP
 •	BMCC Achiever’s Award for 4.0 GPA, September 2016 – December 2017
 
 
-	
+
 WORK EXPERIENCE
 Urban Male Leadership Academy (BMCC), New York, NY
 
 Tutor and Ambassador, February 2016 – December 2018
-•	Served as a tutor for students in computer science and mathematics 
-•	Assisted in planning trips and events for members of the club 
-   
-VOLUNTEER ACTIVITIES	
+•	Served as a tutor for students in computer science and mathematics
+•	Assisted in planning trips and events for members of the club
+
+VOLUNTEER ACTIVITIES
 Computer Programming Club (BMCC), New York, NY
 Treasurer, August 2017 – May 2018
 •	Prepared the club’s budget and provided financial reports on a bi-weekly basis
 •	Organized hour of code and mini on campus hackathons
 •	Organized and taught coding workshops for web programming using HTML and CSS
 
-Brooklyn Chamber of Commerce, New York, NY	
+Brooklyn Chamber of Commerce, New York, NY
 Go! Digital Service Corps Member, September 2016 – April 2017
 •	Created business pages for small business owners using Google My business
 •	Updated business information on Google pages for small business owners
 •	Monitored changes in business monthly.
 •	Recorded business changes such as how many times the business was visited monthly using Excel
-times the business page has been visited 
+times the business page has been visited
 '''
 
 
 phoneNumber = re.compile(r'((\d\d\d)-(\d\d\d-\d\d\d\d))')
 
-#Matched Object
+# Matched Object
 
 mo = phoneNumber.findall(message)
 print(mo)
-
