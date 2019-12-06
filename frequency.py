@@ -12,7 +12,6 @@ def countFreq(a):
         else:
             dic[i] = 1
 
-
 def query():
     for i in dic:
         print(str(i) + ' heads' + ' ' + str(dic[i]) + ' times')
