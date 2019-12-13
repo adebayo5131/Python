@@ -21,8 +21,6 @@ def merge( nums1, m, nums2, n):
         if nums1[i] == 0:
             nums1[i] = nums2[j]
             j+=1
-    x =nums1.sort()
-    print(x)
     return nums1.sort()
 
 nums1 = [-1,0,0,3,3,3,0,0,0]
