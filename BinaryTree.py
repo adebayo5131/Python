@@ -55,12 +55,19 @@ class Node:
                 
     def inOrder(self):
         if self:
+            inOrder(root.leftChild)
+            print(self.val)
+            inOrder(root.leftChild)
+    '''
+        if self:
             
             if self.leftChild:
                 self.leftChild.inOrder()
             print(str(self.value))
             if self.rightChild:
                 self.rightChild.inOrder()
+    '''
+                    
 
 
             
