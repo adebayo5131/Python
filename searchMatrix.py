@@ -22,7 +22,8 @@ def searchMatrix(matrix, target):
         return False
 
     col, row = len(matrix), len(matrix[0])
-    i, j = 0, row - 1
+    i = 0
+    j = row - 1
     while i < col and j >= 0:
         if matrix[i][j] == target:
             return True
