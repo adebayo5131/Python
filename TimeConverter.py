@@ -5,7 +5,7 @@ def solution(T):
     time = T.split(":")
     t1 = time[0]
     t2 = time[1]
-    
+
     if t1.isdigit() and t2.isdigit():
         return T
     elif t1 == "??" and t2 == "??":
@@ -19,8 +19,8 @@ def solution(T):
             else:
                 s[0] = "2"
                 t1 = "".join(s)
-        
-        #list one after split
+
+        # list one after split
         if t1[1] == "?":
             if int(t1[0]) == 1:
                 s[1] = "9"
@@ -28,8 +28,8 @@ def solution(T):
             else:
                 s[1] = "3"
                 t2 = "".join(s)
-    
-    s = list(t2)        
+
+    s = list(t2)
     if t2[0] and t2[1] == "?":
         s[0] = "5"
         s[1] = "9"
@@ -45,4 +45,5 @@ def solution(T):
 
     return t1 + ":" + t2
 
-print(solution("11:??"))
+
+print(solution("1?:??"))
