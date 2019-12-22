@@ -10,7 +10,6 @@ def flatten(dictionary):
         if isinstance(mapper, dict):
             for key, value in mapper.items():
                 checkProperties(value, parent + join + key if parent else key)
-
         else:
             obj[parent] = mapper
 
