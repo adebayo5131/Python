@@ -10,25 +10,46 @@ import sys
 from collections import Counter
 
 mapper = {
-     "+": [],
-     "-" : []
+    "+": [],
+    "-": []
 }
+
+
 def solution(A):
- """Your solution goes here."""
+    dict = {}
+    for rooms in A:
+        if rooms[0] == "+":
+            if rooms not in dict:
+                dict[rooms] = 1
+            else:
+                dict[rooms] += 1
+    i = 0
+    booked = ""
+    for dicRoom in dict:
+        if dict[dicRoom] > i:
+            i = dict[dicRoom]
+            booked = dicRoom
 
- structureMap(A)
- count = Counter(mapper["+"])
- return count.most_common(1)[0][0]
+    booked = booked.split('+')
+    return booked[1]
+#     """Your solution goes here."""
+#     structureMap(A)
+#     count = Counter(mapper["+"])
+#     return count.most_common(1)[0][0]
 
-def structureMap(arr):
- for i in arr:
-   if i[0] == "+":
-     mapper["+"].append("".join(i.split("+")))
-   else:
-     mapper["-"].append("".join(i.split("-")))
 
-A =["+1A", "+3F", "+8X", "−1A", "−3F", "−8X"]
-B =["+1A", "−1A", "+3F", "−3F", "+3F", "+8X"]
-C =["+0A"]
+# def structureMap(arr):
+#     for i in arr:
+#         if i[0] == "+":
+#             mapper["+"].append("".join(i.split("+")))
+#         else:
+#             mapper["-"].append("".join(i.split("-")))
+
+
+A = ["+1A", "+3F", "+8X", "−1A", "−3F", "−8X"]
+B = ["+1A", "−1A", "+3F", "−3F", "+3F", "+8X"]
+C = ["+0A"]
 D = ["+9Z", "−9Z", "+9Z", "−9Z", "+9Z", "+3B"]
-print(solution(A))
+E = ["+9Z", "+9A", "+3E", "+4F", "+6A", "+8E",
+     "-9A", "+9A", "-3E", "-4F", "-6A", "-8E"]
+print(solution(E))
