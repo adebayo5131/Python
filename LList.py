@@ -1,17 +1,17 @@
 class Node:
-    def __init__ (self, data=None):
+    def __init__(self, data=None):
         self.data = data
         self.next = None
-        
+
+
 class llist:
-    def __init__ (self):
+    def __init__(self):
         self.head = None
         self.size = 0
-        
-    
-    def append (self, data = None):
+
+    def append(self, data=None):
         node = Node(data)
-        
+
         if self.head is None:
             self.head = node
         else:
@@ -19,15 +19,17 @@ class llist:
             while current.next:
                 current = current.next
             current.next = node
-    
+
     def iter(self):
-        
+
         current = self.head
         while current:
-            self.size+=1
+            self.size += 1
+            val = current.data
             print(current.data)
             current = current.next
-    
+            yield val
+
     def removeNode(self, data):
         current = self.head
         prev = self.head
@@ -37,12 +39,10 @@ class llist:
                     self.head = current.next
                 else:
                     prev.next = current.next
-                    self.size-=1
+                    self.size -= 1
             prev = current
             current = current.next
-            
-        
-            
+
     def reverseList(self):
         """
         :type head: ListNode
@@ -50,22 +50,25 @@ class llist:
         """
         current = self.head
         previous = None
-        while  current:
-            nxt =  current.next
+        while current:
+            nxt = current.next
             current.next = previous
-            previous =  current
+            previous = current
             current = nxt
-        self.head = previous       
-     
-     
-        
-            
-        
+        self.head = previous
+
+    def search(self, data):
+        for node in self.iter():
+            if data == node:
+                return True
+        return False
+
+
 link = llist()
-    
+
 link.append(5)
 link.append(6)
 link.append(4)
-
 link.reverseList()
 link.iter()
+print(link.search(6))
