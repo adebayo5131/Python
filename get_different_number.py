@@ -15,10 +15,7 @@ def get_different_number(arr):
         count = count + 1
         if arr[i] != count:
             return count
-
     return len(arr)
-
-    pass  # your code goes here
 
 
 arr = [0, 1, 2, 4, 6, 8]
