@@ -6,10 +6,10 @@ def coinC(c, t):
     for i in range(1, t+1):
         for j in range(len(c)):
             if i-c[j] >= 0:
-                memo[i] = 1 + min(memo[i], memo[i-c[j]])
+                memo[i] = min(memo[i], memo[i-c[j]]+1)
     return memo[t]
 
 
-t = 109
-c = [1, 5, 10, 25, 50]
+t = 9
+c = [3, 5]
 print(coinC(c, t))
