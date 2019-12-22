@@ -5,9 +5,7 @@ def Sort(arr):
     return arr
 
 
-
-
-def quickSort(arr,start,last):
+def quickSort(arr, start, last):
     if start < last:
         part = partition(arr, start, last)
         quickSort(arr, start, part-1)
@@ -25,6 +23,7 @@ def partition(arr, start, last):
             arr[i], arr[j] = arr[j], arr[i]
     arr[i + 1], arr[last] = arr[last], arr[i + 1]
     return (i + 1)
+
 
 n = [2, 5, 7, 9, 0, 3, 1, 4, 5, 7, 8, 3, 4, 5, 2, 4, 5, 6]
 print(Sort(n))
