@@ -2,20 +2,38 @@ import pprint
 
 
 def flatten(dictionary):
-    import collections
-    obj = collections.OrderedDict()
-    join = "."
+    flatDictionary = {}
+    Helper("", dictionary, flatDictionary)
+    return flatDictionary
 
-    def checkProperties(mapper, parent=""):
-        if isinstance(mapper, dict):
-            for key, value in mapper.items():
-                checkProperties(value, parent + join + key if parent else key)
+
+def Helper(initialKey, dictionary, flatDictionary):
+    for key in dictionary:
+        if not isinstance(dictionary[key], dict):
+            if (initialKey == None or initialKey == ""):
+                flatDictionary[key] = dictionary[key]
+            else:
+                flatDictionary[initialKey + "." + key] = dictionary[key]
         else:
-            obj[parent] = mapper
+            if (initialKey == None or initialKey == ""):
+                Helper(initialKey + key, dictionary[key], flatDictionary)
+            else:
+                Helper(initialKey + "." + key, dictionary[key], flatDictionary)
 
-    checkProperties(dictionary)
+    # import collections
+    # obj = collections.OrderedDict()
+    # join = "."
 
-    return dict(obj)
+    # def checkProperties(mapper, parent=""):
+    #     if isinstance(mapper, dict):
+    #         for key, value in mapper.items():
+    #             checkProperties(value, parent + join + key if parent else key)
+    #     else:
+    #         obj[parent] = mapper
+
+    # checkProperties(dictionary)
+
+    # return dict(obj)
 
 
 dictionary = {
@@ -96,8 +114,8 @@ pprint.pprint(flatten(dictionary))
 # print(flatten_dictionary(test))
 
 # '''
-# for key, value in flatten_dictionary(test).items(): 
-#     print(key, value) 
+# for key, value in flatten_dictionary(test).items():
+#     print(key, value)
 
 # '''
 
