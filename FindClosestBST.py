@@ -15,9 +15,7 @@ class BST:
     # Worse Case is O(n) time || O(1) space
     def insert(self, key):
         currentNode = self
-        if self is None:
-            self = key
-        while True:
+        while self:
             if currentNode.value > key:
                 if currentNode.left is None:
                     currentNode.left = BST(key)
@@ -116,9 +114,11 @@ test = (
 
 
 array = []
+array2 = []
+array3 = []
 print(test.contains(1), "\n")
 print(test.getMinValue(), "\n")
-# print("InOrder: ", inOrderTraverse(test, array), "\n")
-# print("PreOrder ", preOrderTraverse(test, array), "\n")
-print("PostOrder: ", postOrderTraverse(test, array), "\n")
+print("InOrder: ", inOrderTraverse(test, array), "\n")
+print("PreOrder ", preOrderTraverse(test, array2), "\n")
+print("PostOrder: ", postOrderTraverse(test, array3), "\n")
 print(test.findClosestValueInBst(12), "\n")
