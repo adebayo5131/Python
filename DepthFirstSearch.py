@@ -26,4 +26,5 @@ test4.children[2].addChild("G").addChild("H")
 test4.children[0].children[1].addChild("I").addChild("J")
 test4.children[2].children[0].addChild("K")
 array = []
+
 print(test4.depthFirstSearch(array), "\n")
