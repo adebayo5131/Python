@@ -8,6 +8,8 @@ class Node:
         return self
 
     # Using preorder traversal this will produce a sorted L-R order
+    #Using preorder traversal this will produce a sorted L-R order
+	#(O(V+E) time, vertexs plus edges and space is O(v)
     def depthFirstSearch(self, array):
         if self is None:
             return None
