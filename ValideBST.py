@@ -30,7 +30,8 @@ def helper(tree, minValue, maxValue):
     if tree.value < minValue or tree.value >= maxValue:
         return False
     leftisValid = helper(tree.left, minValue, tree.value)
-    return leftisValid and helper(tree.right, tree.value, maxValue)
+    rightisValid = helper(tree.right, tree.value, maxValue)
+    return leftisValid and rightisValid
 
 
 test1 = (
