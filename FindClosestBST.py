@@ -69,6 +69,24 @@ class BST:
                 break
         return closest
 
+# O(n) Time || O(n) space
+
+
+def invertBinaryTree(tree):
+    queue = [tree]
+
+    while len(queue):
+        current = queue.pop(0)
+        if current is None:
+            continue
+        swapper(current)
+        invertBinaryTree(tree.left)
+        invertBinaryTree(tree.right)
+
+
+def swapper(tree):
+    tree.left, tree.right = tree.right, tree.left
+
 # Average O(n) time || O(n) space
 
 
@@ -79,7 +97,8 @@ def inOrderTraverse(tree, array):
         inOrderTraverse(tree.right, array)
     return array
 
-# Average O(n) time || O(n) space
+
+# Average O(n) time | | O(n) space
 
 
 def preOrderTraverse(tree, array):
@@ -94,7 +113,7 @@ def preOrderTraverse(tree, array):
 
 def postOrderTraverse(tree, array):
     if tree:
-        postOrderTraverse(	tree.left, array)
+        postOrderTraverse(tree.left, array)
         postOrderTraverse(tree.right, array)
         array.append(tree.value)
     return array
@@ -108,17 +127,22 @@ test = (
     .insert(2)
     .insert(1)
     .insert(22)
-    # .insert(13)
-    # .insert(14)
+    .insert(13)
+    .insert(14)
 )
 
 
 array = []
 array2 = []
 array3 = []
+array4 = []
+
+
 print(test.contains(1), "\n")
 print(test.getMinValue(), "\n")
 print("InOrder: ", inOrderTraverse(test, array), "\n")
 print("PreOrder ", preOrderTraverse(test, array2), "\n")
 print("PostOrder: ", postOrderTraverse(test, array3), "\n")
 print(test.findClosestValueInBst(12), "\n")
+invertBinaryTree(test)
+print("Invert a Binary tree inorder Traversal", inOrderTraverse(test, array4))
