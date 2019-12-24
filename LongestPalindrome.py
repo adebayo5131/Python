@@ -1,5 +1,6 @@
 def longestPalindromicSubstring(string):
     checker = ""
+    string = string.replace(' ', '')
     for i in range(len(string)):
         for j in range(i, len(string)):
             subString = string[i:j+1]
@@ -9,14 +10,13 @@ def longestPalindromicSubstring(string):
 
 
 def isPalindrome(s):
-    leftIndex = 0
-    rightIndex = len(s)-1
-    while leftIndex < rightIndex:
-        if s[leftIndex] != s[rightIndex]:
-            return False
-        leftIndex += 1
-        rightIndex -= 1
-    return True
+    w = ""
+    for i in s:
+        w = i + w
+    if w == s:
+        return True
+    else:
+        return False
 
 
-print(longestPalindromicSubstring("z234a5abbba54a32z"))
+print(longestPalindromicSubstring("it's Honeynoon"))
