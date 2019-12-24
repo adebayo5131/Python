@@ -78,5 +78,4 @@ array2 = []
 invertBinaryTreeWithoutQueue(test)
 print("inOrder Treversal without queue", inOrderTraverse(test, array), "\n")
 invertBinaryTree(test)
-
 print("inOrder Treversal with queue", inOrderTraverse(test, array2))
