@@ -20,9 +20,9 @@ def array_of_array_products(arr):
         product = 1
         k = arr.pop(0)
         for j in range(len(arr)):
-        product = product * arr[j]
-        store.append(product)
-        arr.append(k)
+            product = product * arr[j]
+            store.append(product)
+            arr.append(k)
     return store
     '''
 
