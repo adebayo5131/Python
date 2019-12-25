@@ -1,7 +1,5 @@
 
 # O(n) time complexity and O(n) space complexity
-
-
 def twoNumberSum(arr, target):
 
     memo = {}
