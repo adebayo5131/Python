@@ -9,6 +9,7 @@ class Node:
         return self
 
         # BFS uses a queue
+        #(O(v+e) time, vertexs plus edges and space is O(v)
     def breadthFirstSearch(self, array):
         if self is None:
             return []
