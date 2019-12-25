@@ -1,5 +1,5 @@
 
-#Time Complexity O(nlog(n) + mlog(m)) because we are sorting both arrays || space complexity O(n) 
+#Time Complexity O(nlog(n) + mlog(m)) because we are sorting both arrays || space complexity O(1) sorting in place and keeping track 
 def smallestDifference(arrayOne, arrayTwo):
 
     arrayOne.sort()
