@@ -1,5 +1,7 @@
 
-#Time Complexity O(nlog(n) + mlog(m)) because we are sorting both arrays || space complexity O(1) sorting in place and keeping track 
+# Time Complexity O(nlog(n) + mlog(m)) because we are sorting both arrays || space complexity O(1) sorting in place and keeping track
+
+
 def smallestDifference(arrayOne, arrayTwo):
 
     arrayOne.sort()
@@ -16,11 +18,12 @@ def smallestDifference(arrayOne, arrayTwo):
         if firstNum < secondNum:
             currentDiff = secondNum - firstNum
             i += 1
-        elif firstNum > secondNum :
+        elif firstNum > secondNum:
             currentDiff = firstNum - secondNum
             j += 1
         else:
             return [firstNum, secondNum]
+
         if smallestDiff > currentDiff:
             smallestDiff = currentDiff
             smallestPairs = [firstNum, secondNum]
