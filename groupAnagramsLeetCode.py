@@ -15,6 +15,9 @@ class Solution(object):
                 dic[sortedItems] = [items]
         return dic.values()
 
+        # for word in dic:
+        #     print(dic[word])
+
 answer = Solution()
 n  = ["eat", "tea","tap" ,"tan", "ate", "nat"]
 print(answer.groupAnagrams(n))
