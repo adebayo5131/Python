@@ -1,21 +1,20 @@
 Stack = []
-
-
 StackSize = 5
+
 
 def showStack():
     print("Elemet in stack are:")
     for i in Stack:
         print(i)
 
-  
-def Push(Value):
- if len(Stack) < StackSize:
-  Stack.append(Value)
- else:
-  print("Stack is full!")
 
-  
+def Push(Value):
+    if len(Stack) < StackSize:
+        Stack.append(Value)
+    else:
+        print("Stack is full!")
+
+
 def Pop():
     popped = 0
     if len(Stack) > 0:
