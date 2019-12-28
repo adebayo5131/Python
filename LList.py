@@ -9,7 +9,7 @@ class llist:
         self.head = None
         self.size = 0
 
-    def append(self, data=None):
+    def append(self, data):
         node = Node(data)
 
         if self.head is None:
@@ -21,7 +21,6 @@ class llist:
             current.next = node
 
     def iter(self):
-
         current = self.head
         while current:
             self.size += 1
