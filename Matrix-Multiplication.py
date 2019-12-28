@@ -26,9 +26,7 @@ def MatrixChainOrder(p, i, j):
     # placement and return the minimum count
     for k in range(i, j):
 
-        count = (MatrixChainOrder(p, i, k)
-                 + MatrixChainOrder(p, k+1, j)
-                 + p[i-1] * p[k] * p[j])
+        count = (MatrixChainOrder(p, i, k) + MatrixChainOrder(p, k+1, j) + p[i-1] * p[k] * p[j])
 
         if count < _min:
             _min = count
