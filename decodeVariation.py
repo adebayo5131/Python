@@ -32,9 +32,8 @@ def decodeVariations(S):
         if S[i] == '0':
             count = 0
         if S[i-1] == '1' or (S[i-1] == '2' and S[i] < '7'):
-            tmp = count
+            count, previous = previous, count
             count += previous
-            previous = tmp
         else:
             previous = count
     return count
