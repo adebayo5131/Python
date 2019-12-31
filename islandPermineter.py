@@ -10,8 +10,6 @@ class Solution(object):
         # number of columns
         numofCol = len(grid)
 
-        print(len(grid))
-
         lengthOfRow = len(grid[0])
 
         for col in range(numofCol):
@@ -39,6 +37,5 @@ class Solution(object):
         return Sum
 
 
-testInput = [[0, 1, 0, 0], [1, 1, 1, 0], [0, 1, 0, 0], [1, 1, 0, 0]
-             ]
+testInput = [[0, 1, 0, 0], [1, 1, 1, 0], [0, 1, 0, 0], [1, 1, 0, 0]]
 print(Solution.islandPerimeter(testInput))
