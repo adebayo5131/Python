@@ -6,7 +6,7 @@ def maxProfit(prices):
     maxprofit = 0
     if prices is not None:
         minbuy = prices[0]
-        for i in range(len(prices)-1):
+        for i in range(len(prices) - 1):
             if prices[i+1] - minbuy < 0:
                 minbuy = prices[i+1]
             else:
