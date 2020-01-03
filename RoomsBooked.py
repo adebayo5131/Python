@@ -32,6 +32,7 @@ def solution(A):
 
     booked = booked.split('+')
     return booked[1]
+
 #     """Your solution goes here."""
 #     structureMap(A)
 #     count = Counter(mapper["+"])
