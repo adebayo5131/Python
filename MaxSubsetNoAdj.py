@@ -4,6 +4,7 @@ def maxSubsetSumNoAdjacent(array):
 		return 0
 	elif len(array) == 1:
 		return array[0]
+        
 	maxSum = array[:]
 	maxSum[1] = max(array[0], array[1])
 	
@@ -18,4 +19,5 @@ def maxSubsetSumNoAdjacent(array):
 	# 	second = first
 	# 	first = currentSum
 	# return first
+
 print(maxSubsetSumNoAdjacent([75,105,120,75,90,135]))
