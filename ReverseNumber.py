@@ -1,30 +1,16 @@
-class Solution(object):
-    def reverse(self,x): 
-        if x > 0:
-            reverse = 0
-            while(x > 0):
-                reminder =x %10
-                reverse = (reverse *10) + reminder
-                x = x //10
-            reverse
-        elif x <= 0:
-            x*= -1
-            reverse = 0
-            while(x > 0):
-                reminder =x %10
-                reverse = (reverse *10) + reminder
-                x = x //10
-            reverse = reverse*-1
-          #Handle integer overflow
-        minX = -2**31  
-        maxX = 2**31 - 1  
-        if reverse < maxX and reverse > minX:  
-            return reverse  
-        else:
-            return 0
+def reverse(x):
+    result, remaining = 0, abs(x)
+    while remaining:
+        result = result * 10 + remaining % 10
+        remaining //= 10
 
-x= -123      
-c=Solution()
-print(c.reverse(x))
+    minX = -2**31
+    maxX = 2 ** 31 - 1
 
-        
+    if result < maxX and result > minX:
+        return -result if x < 0 else result
+    else:
+        return 0
+
+
+print(reverse(-5678))
