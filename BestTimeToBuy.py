@@ -1,6 +1,7 @@
 
 # O(n) and O(1) space
 
+
 def bestBuy(prices):
     maxProfit = 0
     if prices is not None:
@@ -8,11 +9,23 @@ def bestBuy(prices):
         for price in range(len(prices) - 1):
             checkProfit = prices[price + 1] - minBuy
             if checkProfit < 0:
-                minBuy = prices[price+1]
+                minBuy = prices[price]
             else:
                 if checkProfit > maxProfit:
                     maxProfit = checkProfit
-        
+
     return maxProfit
-                
-print(bestBuy([7, 1, 5, 3, 6, 4]))
+
+
+def bestTime(prices):
+    maxProfit = 0
+    minBuy = float("inf")
+
+    for price in prices:
+        minProfit_to_sell = price - maxProfit
+        maxProfit = max(maxProfit, minProfit_to_sell)
+        minBuy = min(minBuy, price)
+    return maxProfit
+
+
+print(bestTime([7, 1, 5, 3, 6, 4]))
