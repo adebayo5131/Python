@@ -3,15 +3,14 @@ class Solution(object):
         prev = 0
         for j in range(len(nums)):
             if nums[j] != nums[prev]:
-                prev+=1
+                prev += 1
                 nums[prev] = nums[j]
-                
-        print(nums[:prev+1])
-        return prev+1
-                
-        
 
-n = [1,2,3,4,5,5,6,6,7]
+        print(nums)
+        return prev+1
+
+
+n = [1, 2, 3, 4, 5, 5, 6, 6, 7]
 
 test = Solution()
 print(test.removeDuplicates(n))
