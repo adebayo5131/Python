@@ -1,5 +1,6 @@
 def reverse(x):
-    result, remaining = 0, abs(x)
+    result = 0
+    remaining = abs(x)
     while remaining:
         result = result * 10 + remaining % 10
         remaining //= 10
