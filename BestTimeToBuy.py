@@ -22,9 +22,10 @@ def bestTime(prices):
     minBuy = float("inf")
 
     for price in prices:
-        minProfit_to_sell = price - maxProfit
-        maxProfit = max(maxProfit, minProfit_to_sell)
         minBuy = min(minBuy, price)
+        minProfit_to_sell = price - minBuy
+        maxProfit = max(maxProfit, minProfit_to_sell)
+
     return maxProfit
 
 
