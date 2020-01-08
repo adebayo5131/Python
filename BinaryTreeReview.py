@@ -2,16 +2,15 @@ from collections import deque
 
 
 class BST:
-    def __init__(self, value):
+    def __init__(self, value=None, right=None, left=None):
         self.value = value
-        self.right = None
-        self.left = None
+        self.right = right
+        self.left = left
 
     def insert(self, key):
         if not self:
             self = key
-
-        if self.value > key:
+        elif self.value > key:
             if self.left is None:
                 self.left = BST(key)
             else:
@@ -38,7 +37,7 @@ class BST:
         #             break
         # return self
 
-    def inOrder(self):
+    def inOrderTraversal(self):
         stack = []
         result = []
         while self or stack:
@@ -121,6 +120,14 @@ def helper(tree, minValue, maxValue):
     return leftisValid and rightisValid
 
 
+def inOrder(self, array):
+    if self:
+        inOrder(self.left, array)
+        inOrder(self.right, array)
+        array.append(self.value)
+    return array
+
+
 def postOrder(self, array):
     if self:
         postOrder(self.left, array)
@@ -148,17 +155,27 @@ def findTarget(tree, target):
     return False
 
 
+def hasPathSum(self, root, sum):
+    # The time complexity and space complexity O(n) O(h), respectively.
+    if not root:
+        return False
+    if not root.left and not root.right and root.val == sum:
+        return True
+    sum = sum - root.val
+    return self.hasPathSum(root.left, sum) or self.hasPathSum(root.right, sum)
+
+
 test1 = (BST(10).insert(5).insert(15).insert(
     5).insert(2).insert(14).insert(22))
 
 
-print('Inorder Treversal: ',test1.inOrder())
-print('Preorder Treversal: ',test1.preOrder())
-print('Postorder Treversal: ',postOrder(test1, []))
-print('ValidateBst ',validateBst(test1))
-print('Branch Sum : ',test1.branchSums())
-print('findclosest BST Treversal: ',test1.findClosetBST(17))
-print('Inverst Binary Tree Treversal: ',invertBinaryTree(test1))
-print('Inorder After inverting Treversal: ',test1.inOrder())
-print('Find target Treversal: ',findTarget(test1, 36))
-
+print('Inorder traversal recursive: ', inOrder(test1, []))
+print('Inorder traversal : ', test1.inOrderTraversal())
+print('Preorder traversal: ', test1.preOrder())
+print('Postorder traversal: ', postOrder(test1, []))
+print('ValidateBst ', validateBst(test1))
+print('Branch Sum : ', test1.branchSums())
+print('findclosest BST traversal: ', test1.findClosetBST(17))
+print('Inverst Binary Tree traversal: ', invertBinaryTree(test1))
+print('InOrder After inverting traversal: ', test1.inOrderTraversal())
+print('Find target traversal: ', findTarget(test1, 36))
