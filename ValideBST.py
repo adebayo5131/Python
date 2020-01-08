@@ -34,7 +34,7 @@ def helper(tree, minValue, maxValue):
     return leftisValid and rightisValid
 
 
-test1 = (
+test2 = (
     BST(10)
     .insert(5)
     .insert(15)
@@ -42,8 +42,12 @@ test1 = (
     .insert(2)
     .insert(1)
     .insert(22)
-    .insert(13)
-    .insert(14)
+    .insert(-5)
+    .insert(-15)
+    .insert(-5)
+    .insert(-2)
+    .insert(-1)
+    .insert(-22)
 )
 
-print(validateBst(test1))
+print(validateBst(test2))
