@@ -5,8 +5,6 @@ class Solution(object):
             if nums[j] != nums[prev]:
                 prev += 1
                 nums[prev] = nums[j]
-
-        print(nums)
         return prev+1
 
 
