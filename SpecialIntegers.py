@@ -8,22 +8,6 @@ class Solution(object):
         :rtype: int
         """
 
-        if arr is None:
-            return []
-        elif len(arr) == 1:
-            return arr[0]
-        elif len(arr) == 2:
-            if arr[0] == arr[1]:
-                return arr[0]
-            else:
-                return []
-        dict = {}
-
-        for i in arr:
-            if i in dict:
-                dict[i] += 1
-            else:
-                dict[i] = 1
         count = Counter(dict)
         return count.most_common(1)[0][0]
 
