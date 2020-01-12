@@ -4,7 +4,8 @@ def plusOne(digits):
     :rtype: List[int]
     """
     digits[-1] += 1
-    for i in range(len(digits)-1, 0, -1):
+    d = len(digits)-1
+    for i in range(d, 0, -1):
         if digits[i] != 10:
             break
         digits[i] = 0
