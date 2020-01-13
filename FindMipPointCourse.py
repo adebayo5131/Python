@@ -2,10 +2,10 @@
 def findMidPointCourse(pairs):
 
     memo = {}
-    checker ={}
+    checker = {}
     mid = len(pairs)//2
     pl = len(pairs)
-    start =""
+    start = ""
 
     for i in range(pl):
         memo[pairs[i][1]] = pairs[i][0]
@@ -15,18 +15,15 @@ def findMidPointCourse(pairs):
 
     for i in range(mid):
         start = checker[start]
-
     return start
-    
 
 
-
-pairs = [['DataStructures','Algorithm'],
-         ['FoundationofCS',' OperatingSystem'],
-         ['ComputerNetworking','ComputerArchitecture'],
-         ['Algorithms','FoundationofCS'],
-         ['ComputerArchitecture','DatStructures'],
-         ['SoftwareDesign','ComputerNetworking']
+pairs = [['DataStructures', 'Algorithm'],
+         ['FoundationofCS', ' OperatingSystem'],
+         ['ComputerNetworking', 'ComputerArchitecture'],
+         ['Algorithms', 'FoundationofCS'],
+         ['ComputerArchitecture', 'DatStructures'],
+         ['SoftwareDesign', 'ComputerNetworking']
          ]
 
 print(findMidPointCourse(pairs))
