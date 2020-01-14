@@ -26,4 +26,4 @@ def checkPalindrome(s):
 #         left+=1
 #         right-=1
 #     return True
-print(countSubstrings("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"))
+print(countSubstrings("aaaabbca"))
