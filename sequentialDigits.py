@@ -1,6 +1,4 @@
 from collections import deque
-
-
 def sortedList(low, high):
     array = []
     # q = deque(range(1, 9))
