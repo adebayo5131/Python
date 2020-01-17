@@ -18,11 +18,9 @@ def space_separated(s,wordDict):
         for backward in range(forward -1,-1,-1):
             if can_separated[forward] == True:
                 break
-
             if can_separated[backward]:
                 if s[backward:forward] in wordDict:
                     can_separated[forward] = True
-
     return can_separated[n]
 
 
