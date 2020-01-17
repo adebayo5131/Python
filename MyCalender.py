@@ -20,7 +20,7 @@ class MyCalendar(object):
         self.successful_Bookings = []
         self.success = []
 
-    def getIndex(self, start, end):
+    def binary_SearchIndex(self, start, end):
         left = 0
         right = len(self.successful_Bookings) - 1
         while left <= right:
@@ -40,7 +40,7 @@ class MyCalendar(object):
         :type end: int
         :rtype: bool
         """
-        i = self.getIndex(start, end)
+        i = self.binary_SearchIndex(start, end)
         if i == -1:
             self.success.append(False)
             return False
