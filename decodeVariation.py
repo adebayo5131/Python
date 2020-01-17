@@ -27,6 +27,7 @@ Constraints:
 def decodeVariations(S):
     if S[0] == '0':
         return 0
+        
     previous, count = 1, 1
     for i in range(1, len(S)):
         if S[i] == '0':
