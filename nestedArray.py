@@ -18,4 +18,3 @@ def arrayNesting(nums):
 
 A = [5, 4, 0, 3, 1, 6, 2]
 print(arrayNesting(A))
-n
