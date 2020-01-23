@@ -2,19 +2,19 @@
 # O(n) and O(1) space
 
 
-def bestBuy(prices):
-    maxProfit = 0
-    if prices is not None:
-        minBuy = prices[0]
-        for price in range(len(prices) - 1):
-            checkProfit = prices[price + 1] - minBuy
-            if checkProfit < 0:
-                minBuy = prices[price]
-            else:
-                if checkProfit > maxProfit:
-                    maxProfit = checkProfit
+# def bestBuy(prices):
+#     maxProfit = 0
+#     if prices is not None:
+#         minBuy = prices[0]
+#         for price in range(len(prices) - 1):
+#             checkProfit = prices[price + 1] - minBuy
+#             if checkProfit < 0:
+#                 minBuy = prices[price]
+#             else:
+#                 if checkProfit > maxProfit:
+#                     maxProfit = checkProfit
 
-    return maxProfit
+#     return maxProfit
 
 
 def bestTime(prices):
