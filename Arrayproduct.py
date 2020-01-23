@@ -10,7 +10,7 @@ def array_of_array_products(arr):
         product *= arr[i]
 
     product = 1
-    for j in range(len(arr)-1, -1, -1):
+    for j in reversed(range(len(arr))):
         store[j] *= product
         product *= arr[j]
     return store
