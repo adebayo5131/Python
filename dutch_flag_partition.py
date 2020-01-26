@@ -3,11 +3,12 @@ def dutch_flag_partition(array):
     # secondLargest = findSecondLargest(array)
 
     secondLargest = betterFindSecond(array)
-    for i in array:
-        if i == secondLargest:
-            pivot_index = i
 
-    return sortNums(array, pivot_index)
+    # for i in array:
+    #     if i == secondLargest:
+    #         pivot_index = i
+
+    return sortNums(array, secondLargest)
 
 
 def sortNums(array, pivot_index):
@@ -30,8 +31,7 @@ def sortNums(array, pivot_index):
     return array
 
 
-
-##Without better second largest
+# Without better second largest
 def betterFindSecond(array):
     minNumber = min(array)
     maxNumber = max(array)
@@ -41,14 +41,14 @@ def betterFindSecond(array):
             return array.index(i)
 
 # def findSecondLargest(array):
-    
+
 #     largest = [None, None, None]
 
 #     for i in range(len(array)):
 #         updateLargest(array[i], largest)
 #         if largest[0] and largest[1] and largest[2]:
 #             break
-            
+
 #     for i in reversed(range(len(largest)-1)):
 #         if largest[i] > largest[i+1]:
 #             largest[i],largest[i+1] = largest[i+1], largest[i]
@@ -56,16 +56,15 @@ def betterFindSecond(array):
 
 
 # def updateLargest(num, largest):
-    
+
 #     if not largest[0] or not largest[1] or not largest[2]:
 #         if not largest[2]:
 #             shiftUpdate(num, largest, 2)
 #         elif not largest[1] and largest[2] != num:
 #             shiftUpdate(num, largest, 1)
 #         elif not largest[0] and (largest[1] != num and largest[2] != num):
-#             shiftUpdate(num, largest, 0)  
+#             shiftUpdate(num, largest, 0)
 
-    
 
 # def shiftUpdate(num, largest, position):
 
@@ -76,4 +75,4 @@ def betterFindSecond(array):
 #         else:
 #             largest[i] = largest[i+1]
 
-print(dutch_flag_partition([3, 3, 2, 1, 3, 2, 1]))
+print(dutch_flag_partition([5, 6, 6, 3, 3, 5, 5, 6, 6, 3, 5, 6]))
