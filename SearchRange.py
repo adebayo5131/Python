@@ -5,14 +5,17 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
+        indexes = [-1, -1]
         if not nums:
-            return [-1, -1]
+            return indexes
 
         if len(nums) == 1:
             if nums[0] == target:
-                return [0, 0]
+                indexes[0] = 0
+                indexes[1] = 0
+                return indexes
             else:
-                return [-1, -1]
+                return indexes
 
         left = 0
         right = len(nums) - 1
@@ -26,10 +29,12 @@ class Solution(object):
                 # expand to left
                 while nums[left] != target:
                     left += 1
+                indexes[0] = left
                 # expand to right
                 while nums[right] != target:
                     right -= 1
-                return [left, right]
+                indexes[1] = right
+                return indexes
 
         return [-1, -1]
 
