@@ -3,11 +3,6 @@ def dutch_flag_partition(array):
     # secondLargest = findSecondLargest(array)
 
     secondLargest = betterFindSecond(array)
-
-    # for i in array:
-    #     if i == secondLargest:
-    #         pivot_index = i
-
     return sortNums(array, secondLargest)
 
 
