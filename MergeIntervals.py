@@ -17,7 +17,6 @@ class Solution(object):
                 newIntervals.append(intervals[i])
         return newIntervals
 
-
 test = Solution()
 
 print(test.merge([[1, 3], [2, 6], [8, 10], [15, 18]]))
