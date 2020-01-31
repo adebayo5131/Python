@@ -70,4 +70,4 @@ def betterFindSecond(array):
 #         else:
 #             largest[i] = largest[i+1]
 
-print(dutch_flag_partition([5, 6, 6, 3, 3, 5, 5, 6, 6, 3, 5, 6]))
+print(dutch_flag_partition([2, 5, 8, 2, 2, 8, 5, 8]))
