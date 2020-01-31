@@ -19,12 +19,11 @@ def recurse(candidates, target, start, val, newSet):
         val.append(newSet)
         return
 
-    for i in range(start,len(candidates)):
+    for i in range(start, len(candidates)):
         if candidates[i] > target:
             break
         recurse(candidates, target -
                 candidates[i], i, val, newSet + [candidates[i]])
 
 
-
-print(print(combinationSum([2, 3, 5], 8)))
+print(print(combinationSum([1, 2, 3], 4)))
